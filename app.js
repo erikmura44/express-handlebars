@@ -22,6 +22,10 @@ app.get('/page2', function(req, res){
     res.render('page2');
 });
 
+app.get('/page3', function(req, res){
+    res.render('page3');
+});
+
 app.listen(1555, function(){
     console.log('Server running on port 1555');
 });
