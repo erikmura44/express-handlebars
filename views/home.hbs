@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <meta charset="utf-8">
+            <link rel="stylesheet" href="style/main.css">
+            <title>{{title}}</title>
+      </head>
+<body>
+
+    {{#if cohortName}}
+            <h1>Hi {{cohortName}}!</h1>
+        {{else}}
+            <h1>I dont know what cohort you are</h1>
+    {{/if}}
+
+
+    <h1>My favorite foods:</h1>
+
+    <ol>
+        {{#each foods}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ol>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="style/javascript.js"></script>
+</body>
+</html>

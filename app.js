@@ -1,12 +1,25 @@
 var express = require('express');
+var hbs = require('hbs');
+var locals = require('./locals.js');
 var app = express();
 
+app.set('view engine', 'hbs');
+hbs.localsAsTemplateData(app);
+
+locals(app);
+
 app.get('/', function(req, res){
-    res.json({message: 'Hello from express!'});
+    res.render('home', {
+        foods: [
+            'chalupa',
+            'taco',
+            'ceviche'
+        ]
+    });
 });
 
 app.get('/page2', function(req, res){
-    res.json({message: 'I am page 2!!!!'});
+    res.render('page2');
 });
 
 app.listen(1555, function(){
